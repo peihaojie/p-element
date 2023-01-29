@@ -1,19 +1,50 @@
+<!--
+ * @Author: HaoJie
+ * @Date: 2023-01-29 14:27:39
+ * @LastEditTime: 2023-01-29 14:30:28
+ * @LastEditors: HaoJie
+ * @FilePath: \p-element\src\App.vue
+-->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div style="display: flex; justify-content: center">
+      <p-select v-model="aaa" :optionList="list" />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import pSelect from "@/components/pSelect.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    pSelect,
+  },
+  data() {
+    return {
+      aaa: 1,
+      list: [
+        {
+          label: "咳咳咳1",
+          value: 1,
+        },
+        {
+          label: "咳咳咳2",
+          value: 2,
+        },
+        {
+          label: "咳咳咳3",
+          value: 3,
+        },
+        {
+          label: "咳咳咳4",
+          value: 4,
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
